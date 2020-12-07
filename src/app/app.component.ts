@@ -5,14 +5,17 @@ import {Component} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'ngc2hw';
+  public sidebarVisibility = true;
 
-  chemeRender = true;
+  public menu = {
+    '/': 'Home',
+    about: 'About',
+    contacts: 'Contacts'
+  };
 
-  names = ['Vítek', 'Marco', 'Zdeněk'];
-
-  printName(name: string): void {
-    console.debug(name);
+  public recieved(visibility: boolean): void {
+    this.sidebarVisibility = visibility;
   }
 }
